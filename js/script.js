@@ -7,3 +7,8 @@ let pokemonlist = [
 let text = "";
 let i = 0;
 for (; i < pokemonlist.length; i++) {
+  text += pokemonlist[i].name + " (height: " + pokemonlist[i].height + ") ";
+  if (pokemonlist[i].height > 1.5) {
+    text += "Wow that’s big ";
+  }
+}
