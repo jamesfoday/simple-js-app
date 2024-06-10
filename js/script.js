@@ -5,3 +5,5 @@ let pokemonlist = [
 ];
 
 let text = "";
+let i = 0;
+for (; i < pokemonlist.length; i++) {
