@@ -3,3 +3,5 @@ let pokemonlist = [
   { name: "Charizard", height: 1.7, type: ["fire", "flying"] },
   { name: "Charmander", height: 0.6, type: ["fire"] }
 ];
+
+let text = "";
