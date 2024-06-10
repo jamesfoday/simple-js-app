@@ -12,3 +12,4 @@ for (; i < pokemonlist.length; i++) {
     text += "Wow that’s big ";
   }
 }
+document.write(text);
