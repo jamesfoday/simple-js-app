@@ -7,10 +7,13 @@ let pokemonlist = [
 let text = "";
 let i = 0;
 
-pokemonlist.forEach(function(pokemon) { text
-
-}
-)
+pokemonlist.forEach(function(pokemon) {
+  text += pokemon.name + " (height: " + pokemon.height + ") ";
+  if (pokemon.height > 1.5) {
+    text += "Wow that’s big ";
+  }
+  text += "<br>"; 
+});
 
 
 document.write(text);
