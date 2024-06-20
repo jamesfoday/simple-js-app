@@ -1,3 +1,9 @@
+let pokemonRepository = (function() {
+  
+}
+
+
+
 let pokemonlist = [
   { name: "Bulbasaur", height: 0.7, type: ["grass", "poison"] },
   { name: "Charizard", height: 1.7, type: ["fire", "flying"] },
