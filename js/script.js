@@ -31,6 +31,7 @@ let pokemonRepository = (function() {
 
 
 
-pokemonRepository.getAll().forEach(function(pokemon)
+let text = "";
+let i = 0;
 
 document.write(text);
