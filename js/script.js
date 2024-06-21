@@ -34,4 +34,12 @@ let pokemonRepository = (function() {
 let text = "";
 let i = 0;
 
+pokemonRepository.getAll().forEach(function(pokemon) {
+  text += pokemon.name + " (height: " + pokemon.height + ") ";
+  if (pokemon.height > 1.5) {
+    text += "Wow that’s big ";
+  }
+  text += "<br>"; 
+});
+
 document.write(text);
