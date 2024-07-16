@@ -1,3 +1,4 @@
+/* Centering the body content */
 body {
   display: flex;
   justify-content: center;
@@ -6,6 +7,7 @@ body {
   margin: 0;
 }
 
+/* Styling for the Pokémon list */
 .pokemon-list {
   list-style-type: none;
   padding: 0;
@@ -14,8 +16,9 @@ body {
   align-items: center;
 }
 
+/* Styling for the Pokémon buttons */
 .button-class {
-  background-color: #4CAF50; /* Green */
+  background-color: #4CAF50; /* Green background */
   border: none;
   color: white;
   padding: 15px 32px;
@@ -30,11 +33,12 @@ body {
   box-sizing: border-box; /* Include padding and border in the element's total width and height */
 }
 
+/* Hover effect for the buttons */
 .button-class:hover {
   background-color: #45a049;
 }
 
-/* Modal Styles */
+/* Modal styles */
 .modal {
   display: none; /* Hidden by default */
   position: fixed; /* Stay in place */
@@ -45,9 +49,10 @@ body {
   height: 100%;
   overflow: auto; /* Enable scroll if needed */
   background-color: rgb(0, 0, 0); /* Fallback color */
-  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+  background-color: rgba(0, 0, 0, 0.4); /* Black with opacity */
 }
 
+/* Modal content styles */
 .modal-content {
   background-color: #fefefe;
   margin: 15% auto; /* 15% from the top and centered */
@@ -57,6 +62,7 @@ body {
   text-align: center;
 }
 
+/* Close button styles */
 .close-button {
   color: #aaa;
   float: right;
@@ -64,6 +70,7 @@ body {
   font-weight: bold;
 }
 
+/* Hover effect for the close button */
 .close-button:hover,
 .close-button:focus {
   color: black;
@@ -71,6 +78,7 @@ body {
   cursor: pointer;
 }
 
+/* Pokémon image styles */
 #pokemon-image {
   max-width: 100%;
 }
