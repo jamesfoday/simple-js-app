@@ -42,7 +42,7 @@ body {
 .modal {
   display: none; /* Hidden by default */
   position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
+  
   left: 0;
   top: 0;
   width: 100%;
@@ -60,6 +60,8 @@ body {
   border: 1px solid #888;
   width: 80%; /* Could be more or less, depending on screen size */
   text-align: center;
+  position: relative; /* Required for the z-index of the close button */
+  z-index: 2; /* Ensure content is above the modal overlay */
 }
 
 /* Close button styles */
@@ -68,6 +70,10 @@ body {
   float: right;
   font-size: 28px;
   font-weight: bold;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  z-index: 3; /* Ensure the close button is above everything */
 }
 
 /* Hover effect for the close button */

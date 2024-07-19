@@ -28,6 +28,8 @@ let pokemonRepository = (function () {
 
     button.innerText = pokemon.name;
     button.classList.add("button-class");
+    button.setAttribute("data-toggle", "modal");
+    button.setAttribute("data-target", "#pokemon-modal");
 
     listItem.appendChild(button);
     pokemonListElement.appendChild(listItem);
@@ -78,8 +80,6 @@ let pokemonRepository = (function () {
   // Displays details for a given Pokémon
   function showDetails(item) {
     loadDetails(item).then(function () {
-      let modal = document.getElementById('pokemon-modal');
-      let closeButton = document.getElementById('close-button');
       let pokemonImage = document.getElementById('pokemon-image');
       let pokemonName = document.getElementById('pokemon-name');
       let pokemonHeight = document.getElementById('pokemon-height');
@@ -88,28 +88,6 @@ let pokemonRepository = (function () {
       pokemonImage.src = item.imageUrl;
       pokemonName.innerText = `Name: ${item.name}`;
       pokemonHeight.innerText = `Height: ${item.height}`;
-
-      // Show the modal
-      modal.style.display = 'block';
-
-      // Close the modal when the close button is clicked
-      closeButton.onclick = function () {
-        modal.style.display = 'none';
-      };
-
-      // Close the modal when clicking outside of the modal
-      window.onclick = function (event) {
-        if (event.target === modal) {
-          modal.style.display = 'none';
-        }
-      };
-
-      // Close the modal when pressing the Escape key
-      window.onkeydown = function (event) {
-        if (event.key === "Escape") {
-          modal.style.display = 'none';
-        }
-      };
     });
   }
 
