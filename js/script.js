@@ -24,10 +24,11 @@ let pokemonRepository = (function () {
   function addListItem(pokemon) {
     let pokemonListElement = document.querySelector(".pokemon-list");
     let listItem = document.createElement("li");
-    let button = document.createElement("button");
+    listItem.classList.add("list-group-item"); // Add Bootstrap list-group-item class
 
+    let button = document.createElement("button");
     button.innerText = pokemon.name;
-    button.classList.add("button-class");
+    button.classList.add("btn", "btn-primary", "button-class"); // Add Bootstrap button classes
     button.setAttribute("data-toggle", "modal");
     button.setAttribute("data-target", "#pokemon-modal");
 

@@ -1,13 +1,8 @@
-/* Centering the body content */
+/* Ensure the navbar doesn't overlap with the main content */
 body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  margin: 0;
+  padding-top: 56px; /* Adjust based on navbar height */
 }
 
-/* Styling for the Pokémon list */
 .pokemon-list {
   list-style-type: none;
   padding: 0;
@@ -16,55 +11,36 @@ body {
   align-items: center;
 }
 
-/* Styling for the Pokémon buttons */
 .button-class {
-  background-color: #4CAF50; /* Green background */
-  border: none;
-  color: white;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
   margin: 4px 2px;
-  cursor: pointer;
-  border-radius: 4px;
-  width: 200px; /* Fixed width */
-  box-sizing: border-box; /* Include padding and border in the element's total width and height */
+  width: 200px;
+  box-sizing: border-box;
 }
 
-/* Hover effect for the buttons */
-.button-class:hover {
-  background-color: #45a049;
-}
-
-/* Modal styles */
 .modal {
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  
+  display: none;
+  position: fixed;
+
   left: 0;
   top: 0;
   width: 100%;
   height: 100%;
-  overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0, 0, 0); /* Fallback color */
-  background-color: rgba(0, 0, 0, 0.4); /* Black with opacity */
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
 }
 
-/* Modal content styles */
 .modal-content {
   background-color: #fefefe;
-  margin: 15% auto; /* 15% from the top and centered */
+  margin: 15% auto;
   padding: 20px;
   border: 1px solid #888;
-  width: 80%; /* Could be more or less, depending on screen size */
+  width: 80%;
   text-align: center;
-  position: relative; /* Required for the z-index of the close button */
-  z-index: 2; /* Ensure content is above the modal overlay */
+  position: relative;
+  z-index: 2;
 }
 
-/* Close button styles */
 .close-button {
   color: #aaa;
   float: right;
@@ -73,10 +49,9 @@ body {
   position: absolute;
   right: 10px;
   top: 10px;
-  z-index: 3; /* Ensure the close button is above everything */
+  z-index: 3;
 }
 
-/* Hover effect for the close button */
 .close-button:hover,
 .close-button:focus {
   color: black;
@@ -84,7 +59,6 @@ body {
   cursor: pointer;
 }
 
-/* Pokémon image styles */
 #pokemon-image {
   max-width: 100%;
 }

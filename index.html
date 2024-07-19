@@ -8,8 +8,39 @@
   <link href="styles.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
-  <!-- Unordered list to contain Pokémon list items -->
-  <ul class="pokemon-list list-group"></ul>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light w-100 fixed-top">
+    <a class="navbar-brand" href="#">Pokémon App</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Features</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Pricing</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+        </li>
+      </ul>
+      <form class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+      </form>
+    </div>
+  </nav>
+
+  <!-- Container for main content -->
+  <div class="container mt-5 pt-4">
+    <!-- Unordered list to contain Pokémon list items -->
+    <ul class="pokemon-list list-group mt-4"></ul>
+  </div>
 
   <!-- Modal for displaying Pokémon details -->
   <div class="modal fade" id="pokemon-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
