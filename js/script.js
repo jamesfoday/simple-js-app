@@ -1,6 +1,6 @@
 let pokemonRepository = (function () {
   let pokemonList = [];
-  let apiUrl = 'https://pokeapi.co/api/v2/pokemon/?limit=150';
+  let apiUrl = "https://pokeapi.co/api/v2/pokemon/?limit=150";
 
   // Adds a new Pokémon to the list
   function add(pokemon) {
@@ -51,7 +51,7 @@ let pokemonRepository = (function () {
         json.results.forEach(function (item) {
           let pokemon = {
             name: item.name,
-            detailsUrl: item.url
+            detailsUrl: item.url,
           };
           add(pokemon);
         });
@@ -81,9 +81,9 @@ let pokemonRepository = (function () {
   // Displays details for a given Pokémon
   function showDetails(item) {
     loadDetails(item).then(function () {
-      let pokemonImage = document.getElementById('pokemon-image');
-      let pokemonName = document.getElementById('pokemon-name');
-      let pokemonHeight = document.getElementById('pokemon-height');
+      let pokemonImage = document.getElementById("pokemon-image");
+      let pokemonName = document.getElementById("pokemon-name");
+      let pokemonHeight = document.getElementById("pokemon-height");
 
       // Set the content of the modal
       pokemonImage.src = item.imageUrl;
@@ -99,7 +99,7 @@ let pokemonRepository = (function () {
     addListItem: addListItem,
     loadList: loadList,
     loadDetails: loadDetails,
-    showDetails: showDetails
+    showDetails: showDetails,
   };
 })();
 
